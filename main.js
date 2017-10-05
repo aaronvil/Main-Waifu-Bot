@@ -50,11 +50,11 @@ if (message.author.bot) return;
 if (!message.content.startsWith(prefix))
 {
     commands = 0;
-    let userData = points[message.author.id];
-    userData.points++;
 }
 else commands = 1;
 
+let userData = points[message.author.id];
+userData.points++;
 
 if (!points[message.author.id]) points[message.author.id] = {
     points: 0,
